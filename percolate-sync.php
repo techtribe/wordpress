@@ -61,9 +61,6 @@ class Percolate_Setup
     // Add admin scripts
     add_action('admin_enqueue_scripts', array( $this, 'addAdminScripts' ));
 
-    // Add Angular's tags to header
-    add_action('wp_head', array( $this, 'setupHeader' ));
-
     // Add custom Cron schedules
     add_filter('cron_schedules', array( $this, 'cron_update_schedules' ));
 
@@ -360,11 +357,6 @@ class Percolate_Setup
 
       wp_enqueue_style( 'percolate-styles', plugins_url( '/frontend/styles/css/percolate-settings.css', __FILE__ ), null, '1', 'all' );
     }
-  }
-
-  public function setupHeader()
-  {
-    echo '<base href="/">';
   }
 
   public function cron_update_schedules()
