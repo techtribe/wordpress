@@ -1,4 +1,7 @@
 {
+    "name": "makerstreet/percolate",
+    "description": "This a fork of the Percolate Wordpress Plugin, a tool to bring new, innovative capabilities to enhance your entire marketing process.",
+    "type": "wordpress-plugin",
     "config": {
         "vendor-dir": "api/vendor"
     },
